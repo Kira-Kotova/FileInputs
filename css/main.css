@@ -6,22 +6,22 @@
 }
 
 body {
-	color: #13547a;
+	background: #C9CCD3 linear-gradient(90deg, rgba(255, 255, 255, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%);
+	background-blend-mode: lighten;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-family: 'Montserrat', sans-serif;
-	background: #dddddd;
 }
 
 a {
 	outline: none;
-	color: #80d0c7;
+	color: #16a085;
 	text-decoration: none;
 }
 
 a:hover,
 a:focus {
-	color: #13547a;
+	color: #f4d03f;
 }
 
 .hidden {
@@ -34,7 +34,7 @@ a:focus {
 /* Content */
 
 #loadBox{
-	background: #333333;
+	background-image: linear-gradient(to bottom, #434343 0%, black 100%);
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -60,11 +60,11 @@ a:focus {
 
 #loadBox footer a:hover,
 #loadBox footer a:focus {
-	color: #043755;
+	color: #f4d03f;
 }
 
 #sideBox {
-	background-color: #333333;
+	background-image: linear-gradient(to top, #434343 0%, black 100%);
 	width: 215px;
 	position: fixed;
 	top: 0;
