@@ -1,4 +1,4 @@
 Test WEB with upload
 
 
-![Demonstrate](https://cuu.su/diHmOFL)
+ <img src="https://wmpics.pics/di-I4H3.gif" />
