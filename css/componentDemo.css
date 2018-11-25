@@ -1,0 +1,61 @@
+.js .inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+    max-width: 70%;
+    font-weight: 600;
+    height: 36px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 10px 15px;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.no-js .inputfile + label {
+    display: none;
+}
+
+.inputfile:focus + label,
+.inputfile.has-focus + label {
+    outline: 1px dotted #333;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile + label svg {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -4px;
+    margin-right: 4px;
+}
+
+.inputFile + label {
+    background: linear-gradient(15deg,#f4d03f  0%, #16a085 100%);
+    -webkit-background-clip: border;
+    border: 2px solid currentColor;
+}
+
+.inputFile:focus + label,
+.inputFile.has-focus + label,
+.inputFile + label:hover {
+    color: #722040;
+}
+    /*background: linear-gradient(15deg, #043755 0%, #52aea4 100%);
+}*//*background:  linear-gradient(15deg,#f4d03f  0%, #16a085 100%);}*/
+
+li{
+    color: #7cb765;
+}

@@ -1,97 +1,89 @@
-.js .inputfile {
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-}
-
-.inputfile + label {
-    max-width: 70%;
-    font-weight: 600;
-    height: 36px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    cursor: pointer;
-    display: inline-block;
-    overflow: hidden;
-    padding: 10px 15px;
-    position: relative;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    font-size: 12px;
-}
-
-.no-js .inputfile + label {
-    display: none;
-}
-
-.inputfile:focus + label,
-.inputfile.has-focus + label {
-    outline: 1px dotted #333;
-    outline: -webkit-focus-ring-color auto 5px;
-}
-
-.inputfile + label svg {
-    width: 16px;
-    height: 16px;
-    vertical-align: middle;
-    fill: currentColor;
-    margin-top: -4px;
-    margin-right: 4px;
-}
-
-.inputFile + label {
-   gradient: linear-gradient(15deg, #16a085 0%, #f4d03f 100%);
-}
-
-.inputFile + label {
-
-    background-color: #dddddd;
-    padding: 0;
-}
-
-.inputFile:focus + label,
-.inputFile.has-focus + label,
-.inputFile + label:hover {
-    border-color: #16a085;
-}
-
-.inputFile + label span,
-.inputFile + label strong {
-    padding: 12px 20px;
-}
-
-.inputFile + label span {
-    width: 200px;
-    min-height: 2em;
-    display: inline-block;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    vertical-align: top;
-}
-
-.inputFile + label strong {
-    height: 100%;
-    color: #dddddd;
-    background-image: linear-gradient(15deg, #16a085 0%, #f4d03f 100%);
-    display: inline-block;
-}
-
-.inputFile:focus + label strong,
-.inputFile.has-focus + label strong,
-.inputFile + label:hover strong {
-    /*background: linear-gradient(15deg, #043755 0%, #52aea4 100%);
-}*/background:  linear-gradient(15deg,#f4d03f  0%, #16a085 100%);}
-
-@media screen and (max-width: 50em) {
-	.inputFile + label strong {
-		display: block;
-	}
-}
-
 li{
     color: #7cb765;
+}
+.file-upload {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.display{
+    background: #bbbb;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding-top: 40px;
+    z-index: -1;
+    display: flex;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+#uploadButton{
+    margin-left: 5px;
+    position: absolute;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    z-index: 2;}
+
+.btn {
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+.button_border {
+    padding: 5px 20px 4px;
+    font-size: 15px;
+    background: none;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #a0a0a0;
+    border-radius: 4px;
+    color: #787878;
+}
+
+.button_border:hover {
+    color: #fff !important;
+    background: #a0a0a0;
+}
+.button_border[data-button="grey"] {
+    border-color: #a1a1a1;
+    color: #a1a1a1;
+}
+.button_border[data-button="green"] {
+    border-color: #2ecc71;
+    color: #2ecc71;
+}
+.button_border[data-button="grey"]:hover {
+    background: #a1a1a1;
+}
+.button_border[data-button="green"]:hover {
+    background: #2ecc71;
+}
+
+.button_arrow:hover:after {
+    content: " 》";
+    position: absolute;
+    margin-left: 4px;
+    opacity: 0.6;
+}
+.button_arrow:hover {
+    padding-left: 1em;
+    padding-right: 1.6em;
 }
