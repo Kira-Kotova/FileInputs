@@ -1,58 +1,32 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js" >
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>File Inputs</title>
-        <link rel="shortcut icon" href="favicon.ico">
-        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-        <link rel="stylesheet" type="text/css" href="css/main.css" />
-        <link rel="stylesheet" type="text/css" href="css/component.css" />
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    </head>
-    <body>
-        <div id="loadBox">
-            <div class="input-group">
-                <input type="text" class="form-control file-upload-text" disabled placeholder="select a file..." accept="application/json"/>
-                <span class="input-group-btn">
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>File Inputs</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="loadBox">
+        <div class="input-group" id="input-group">
+            <input  type="text" class="form-control file-upload-text" disabled placeholder="select a file..."/>
+            <span class="input-group-btn">
                     <button type="button" class="btn button_border btn-success file-upload-btn" data-button="grey">
                         Browse...
-                     <input type="file" class="file-upload" name="myFile" />
+                     <input id="file" type="file" class="file-upload" name="myFile" accept="application/json" />
                     </button>
-                </span>
-                <button id="uploadButton" type="button" class="btn button_border button_arrow" data-button="green" @click="uploadFile($event)" >Upload</button>
-            </div>
+            </span>
+            <button id="uploadButton" type="button" class="btn button_border button_arrow" data-button="green" @click="readFile($event)" >Upload</button>
         </div>
-        <div class="display"></div>
-        <script>
-            var myVueFileReader = new Vue(
-                {
-                    el: '.input-group',
-                    methods:
-                        {
-                            //Функция чтения файла
-                            uploadFile: function(e)
-                            {
-                                var vm = this;
-                                var file = e.target.ownerDocument.getElementById('file').files[0];
-                                var reader = new FileReader();
-                                //Связываем событие загрузки объекта-потока
-                                //с передачей результата, полученного потоком,
-                                //на html-страницу через элемент с именем "out"
-                                reader.onload = function()
-                                {
-                                    vm.fileData = JSON.parse(reader.result);
-                                };
-                                //Потоку выдаётся директива-метод чтения поступившего
-                                //файла в качестве текстового файла
-                                reader.readAsText(file);
-                            }
-                        },
-                    created: function()
-                    {
-                    }
-                })
-        </script>
+        <li v-for="el in elements">{{ el.id }}) <b>{{ el.name }}	</b> [{{ el.username }}]	<i>E-mail: </i>: {{ el.email }}</li>
+    </div>
+
+    <script src="js/Vue.js"></script>
     <script src="js/input.js"></script>
-    </body>
+    <script src="js/read.js"></script>
+
+</body>
 </html>
